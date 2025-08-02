@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directed Graph Blog</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/main-page.css" />
+</head>
+
+<body class="bg-orange-100 w-full max-w-3xl mx-auto px-4 md:px-8 min-h-screen relative">
+    <!-- Navigation -->
+    <nav class="mt-6">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <h1 class="font-serif text-4xl text-center md:text-left">Vivek's Blog</h1>
+            <div class="mt-5 md:mt-0 flex flex-wrap gap-5 justify-center md:justify-end">
+                <a href="../index.html"
+                    class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300">Home</a>
+                <a href="./blog.html"
+                    class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300">Blogs</a>
+            </div>
+        </div>
+    </nav>
+
+    <hr class="mt-3" />
+
+    <!-- Blog Content -->
+    <section class="mt-8 space-y-4 pb-32">
+        <h2 class="text-2xl font-bold text-center">Understanding Directed Graphs in Python</h2>
+
+        <p>
+            In this blog post, we’ll dive into implementing and working with a <span class="font-semibold">Directed
+                Graph</span> using Python. We'll also walk through basic components such as edges, adjacency lists, and
+            traversal.
+        </p>
+
+        <p>
+            A <strong>Directed Graph (or Digraph)</strong> is a set of nodes connected by edges, where the edges have a
+            direction - meaning they go from one node to another.
+        </p>
+
+        <!-- Centered Image with Caption -->
+        <div class="flex flex-col items-center justify-center mt-6">
+            <img src="./assets/dg1.png" alt="Directed Graph Example" class="w-full max-w-md rounded shadow-lg" />
+            <p class="text-sm text-gray-700 mt-2">
+                Source:
+                <a href="https://en.wikipedia.org/wiki/Directed_graph" target="_blank" class="text-blue-600 underline">
+                    Wikipedia – Directed Graph
+                </a>
+            </p>
+        </div>
+
+        <p>
+            🛠️ Here's how you can build a simple directed graph class in Python using an adjacency list:
+        </p>
+
+        <pre class="bg-white p-4 rounded text-sm overflow-x-auto"><code class="language-python">class Graph:
+    def __init__(self, vno):
+        self.vertex_count = vno
+        self.adj_list = {v: [] for v in range(vno)}
+
+    def add_edge(self, u, v, weight=1):
+        if 0 &lt;= u &lt; self.vertex_count and 0 &lt;= v &lt; self.vertex_count:
+            self.adj_list[u].append((v, weight))
+
+    def print_graph(self):
+        for vertex, neighbor in self.adj_list.items():
+            print(f'Vertex {vertex} : {neighbor}')
+</code></pre>
+
+        <p>
+            🔍 In the above code:
+        <ul class="list-disc list-inside ml-4">
+            <li><code>add_edge(u, v)</code> adds a directed edge from node <strong>u</strong> to node
+                <strong>v</strong>.
+            </li>
+            <li>The adjacency list stores a list of tuples representing neighbors and weights for each vertex.</li>
+        </ul>
+        </p>
+
+        <p>
+            🧪 Let's test it with a few nodes and connections:
+        </p>
+
+        <pre class="bg-white p-4 rounded text-sm overflow-x-auto"><code class="language-python">if __name__ == "__main__":
+    graph = Graph(4)
+    graph.add_edge(0, 1)
+    graph.add_edge(0, 2)
+    graph.add_edge(2, 3)
+    graph.print_graph()
+</code></pre>
+
+        <p>
+            ✅ Expected Output:
+        </p>
+
+        <pre class="bg-white p-4 rounded text-sm overflow-x-auto"><code>Vertex 0 : [(1, 1), (2, 1)]
+Vertex 1 : []
+Vertex 2 : [(3, 1)]
+Vertex 3 : []
+</code></pre>
+
+        <p>
+            🎯 Key Takeaways:
+        <ul class="list-disc list-inside ml-4">
+            <li>Directed graphs only connect one way: <code>(u -> v)</code>.</li>
+            <li>No edge from <code>v -> u</code> is assumed unless explicitly added.</li>
+            <li>Useful in scenarios like Dependency trees, Social Networking Branches (followers), or building routing systems.</li>
+        </ul>
+        </p>
+
+        <p class="mt-6">
+            🔗 Source Code:
+            <a href="https://github.com/AlgebraicAI-Infinity/Graph-Theory/blob/main/src/basics/directedGraph.py"
+                class="text-blue-700 underline font-semibold" target="_blank">GitHub Repository</a>
+        </p>
+    </section>
+
+    <!-- Footer or Logo Section -->
+    <div class="fixed bottom-4 right-4 flex items-center gap-4 bg-orange-100 p-3 rounded-xl shadow-lg z-50">
+        <div class="text-right space-y-1">
+            <h2 class="text-xl font-bold">Vivek Sharma</h2>
+            <p class="text-base">Founding Engineer</p>
+            <p class="text-base">Ally Solutions</p>
+        </div>
+        <img src="./assets/Logo.png" alt="Logo"
+            class="w-20 h-20 object-cover rounded-full border border-gray-300 shadow-md" />
+    </div>
+</body>
+
+</html>
