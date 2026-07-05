@@ -4,83 +4,75 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Concept ThaT Matters</title>
+    <title>Concept That Matters — Vivek Sharma</title>
+    <meta name="description"
+        content="Concept That Matters — engineering, mathematics and systems notes by Vivek Sharma." />
 
-    <!-- Google Anayltics -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDVBB4604E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-WDVBB4604E');
     </script>
-
-    <!-- Tailwind CDN -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <!-- Polyfill and MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Fixed stylesheet tag -->
+    <!-- Centralized stylesheet -->
     <link rel="stylesheet" href="./css/main-page.css" />
 </head>
 
-<body class="bg-orange-100 w-full max-w-3xl mx-auto px-4 md:px-8 min-h-screen relative">
+<body>
     <!-- Navigation -->
-    <nav class="mt-6">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
-          <h1 class="font-serif text-base text-center md:text-left">💡 Concept ✦ That ✦ Matters</h1>
-
-            <div class="mt-5 md:mt-0 flex flex-wrap gap-5 justify-center md:justify-end">
-                <a href="index.html"
-                    class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300">Home</a>
-                <a href="./blogs/blog.html"
-                    class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300">Blogs</a>
-            </div>
+    <nav class="site-nav">
+        <span class="brand">💡 Concept ✦ That ✦ Matters</span>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link is-active">Home</a>
+            <a href="./blogs/blog.html" class="nav-link">Blogs</a>
         </div>
     </nav>
 
-    <hr class="mt-3" />
+    <hr />
 
-    <!-- Main Section -->
-    <section class="mt-8 text-center space-y-4">
-        <h1 class="text-lg">
-            Hi, myself <span class="font-semibold">Vivek Sharma</span>
+    <!-- Hero -->
+    <section class="prose" style="text-align:center; margin-top:2.5rem;">
+        <span class="eyebrow">Builder · Engineer · Mathematician</span>
+        <h1 style="font-size:clamp(1.8rem,1.3rem+2vw,2.6rem); margin-top:1rem;">
+            Hi, I'm <span style="color:var(--accent-hover)">Vivek Sharma</span>
         </h1>
-        <h1 class="text-lg">
-            Builder | Software Engineer | Mathematician | Open Source Contributor| Software Engineer @Attack Capital(YC W22) | Tech Enthusiast,Ex-Founding Engineer
-            at Ally Solutions, NIT Jamshedpur (2022–2026)
-        </h1>
-        <h1 class="text-lg">My socials for connecting!</h1>
+        <p class="muted" style="max-width:36rem; margin:0.75rem auto 0;">
+            Software Engineer &amp; Open Source Contributor. Currently building at
+            <strong>Attack Capital</strong> (YC W22). Ex-Founding Engineer at Ally Solutions.
+            NIT Jamshedpur, 2022–2026.
+        </p>
 
-        <hr class="my-5" />
+        <hr />
 
-        <!-- Social Links -->
-        <div class="flex justify-center flex-wrap gap-6 mt-4">
-            <a href="https://x.com/VivekSh80330931"
-                class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300 font-semibold">Twitter</a>
-            <a href="https://www.linkedin.com/in/vivekuchiha/"
-                class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300 font-semibold">LinkedIn</a>
-            <a href="https://github.com/uchiha-vivek"
-                class="relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-300 font-semibold">GitHub</a>
+        <p class="muted" style="margin-bottom:0.25rem;">Find me around the web</p>
+        <div class="nav-links" style="margin-top:0.75rem;">
+            <a href="https://x.com/VivekSh80330931" class="nav-link" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.linkedin.com/in/vivekuchiha/" class="nav-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/uchiha-vivek" class="nav-link" target="_blank" rel="noopener">GitHub</a>
         </div>
     </section>
 
-    <!-- Fixed Bio and Logo Section at bottom right -->
-    <div class="fixed bottom-4 right-4 flex items-center gap-4 bg-orange-100 p-3 rounded-xl shadow-lg z-50">
-        <div class="text-right space-y-1">
-            <h2 class="text-xl font-bold">Vivek Sharma</h2>
-            <p class="text-base">Founding Engineer</p>
-            <p class="text-base">Ally Solutions</p>
+    <!-- Floating profile card -->
+    <aside class="profile-card">
+        <div class="meta">
+            <div class="name">Vivek Sharma</div>
+            <div class="role">Founding Engineer</div>
+            <div class="role">Ally Solutions</div>
         </div>
-        <img src="https://allyworkspace.blob.core.windows.net/images/logo-ally-new.png" alt="Logo"
-            class="w-20 h-20 object-cover rounded-full border border-gray-300 shadow-md" />
-    </div>
+        <img src="https://allyworkspace.blob.core.windows.net/images/logo-ally-new.png" alt="Ally Solutions logo" />
+    </aside>
+
+    <footer class="site-footer">
+        © <span id="year">2026</span> Vivek Sharma · Concept That Matters
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
-
-
 
 </html>

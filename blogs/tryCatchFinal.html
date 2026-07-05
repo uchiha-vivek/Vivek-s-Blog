@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Try, Catch and Final</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Try, Catch and Finally — Concept That Matters</title>
+  <link rel="stylesheet" href="../css/main-page.css" />
 </head>
-<body class="bg-orange-100 text-white min-h-screen flex items-center justify-center">
-  <h1 class="text-3xl md:text-4xl font-semibold text-center px-4">
-    The Tale of <span class="text-yellow-400">Try</span>, 
-    <span class="text-pink-400">Catch</span> and 
-    <span class="text-green-400">Final</span> — Guardians of Clean Code!
-  </h1>
+
+<body>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <span class="brand">Vivek's Blog</span>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="./blog.html" class="nav-link">Blogs</a>
+    </div>
+  </nav>
+
+  <hr />
+
+  <section class="prose" style="text-align:center; margin-top:3rem;">
+    <h1 style="font-size:clamp(1.6rem,1.2rem+1.8vw,2.2rem);">
+      The Tale of
+      <span style="color:#facc15">Try</span>,
+      <span style="color:#f472b6">Catch</span> and
+      <span style="color:#4ade80">Finally</span>
+      — Guardians of Clean Code!
+    </h1>
+  </section>
+
+  <footer class="site-footer">
+    © <span id="year">2026</span> Vivek Sharma · Concept That Matters
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>
